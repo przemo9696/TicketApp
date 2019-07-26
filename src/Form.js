@@ -40,7 +40,7 @@ export function TicketForm() {
 
             <div id="inBox">
                 <div id="in"> Wybierz typ biletu:
-                    <select value={value} onChange={onChangeValue}>
+                    <select id="input" value={value} onChange={onChangeValue}>
                         <option value = "-" disabled>- Wybierz bilet -</option>
                         <option value = {Ticket1.value}>1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe</option>
                         <option value = {Ticket2.value}>1 godzinny metropolitalny na linie zwykłe</option>
@@ -59,17 +59,19 @@ export function TicketForm() {
 
 
                 <div id="in">
-                    Ile biletów chcesz kupić?
+                    Ile biletów chcesz kupić?<br/>
                         <input type="number" value={ticketNum} onChange={onChangeTicketNum}/>
                 </div>
 
                 <div id="in">
-                    Wprowadź numer linii:
-                        <input type="text" value={vehNr} onChange={onChangeVehNr} placeholder="np. 12 (tramwaj)"/>
+                    Wprowadź numer linii:<br/>
+                        <input type="text" value={vehNr} onChange={onChangeVehNr} placeholder="Numer linii"/>
+                        <label><input type="radio" name="vehType" value=" (tramwaj)" onChange={onChangeVehType}/>Tramwaj</label>
+                        <label><input type="radio" name="vehType" value=" (autobus)" onChange={onChangeVehType}/>Autobus</label>
                 </div>
 
                 <div id="in">
-                    Wprowadź datę i godzinę:
+                    Wprowadź datę i godzinę:<br/>
                         <input type="date" value={date} onChange={onChangeDate}/>
                         <input type="time" value={time} onChange={onChangeTime} step="2"/>
                 </div>

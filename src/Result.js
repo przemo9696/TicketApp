@@ -113,7 +113,7 @@ export const Result = (props) => {
             <div id="ans">MZKZG</div>
 
             <p> Numer Linii:</p>
-            <div id="ans"> {vehNr} </div>
+            <div id="ans"> {vehNr}{vehType} </div>
 
             <p> Liczba sztuk: </p>
             <div id="ans"> {ticketNum} </div>
