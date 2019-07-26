@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: gainsboro;
   margin-bottom:10px;
 }
 
@@ -35,9 +35,6 @@ p {
   padding-right:110px;
   margin-left: auto;
   margin-right:auto;
-  -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
-  box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
 
 }
 
@@ -51,9 +48,6 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
-  box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
   overflow: hidden;
 
 }
@@ -69,7 +63,7 @@ p {
 }
 #QueR{
 
-  margin-bottom: 20px;
+  margin-bottom: 125px;
   position: relative;
   text-align: center;
 }
@@ -80,20 +74,28 @@ p {
 }
 
 #logomzk{
-  text-align: left;
+  text-align: center;
   position: relative;
-
-  animation-name: fly;
-  animation-duration:5s;
-
+  animation-name: increase;
+  animation-duration:4s;
   animation-iteration-count:infinite;
   overflow: hidden;
+  margin-top: 50px;
+  bottom: 50px;
 
 }
 
-@keyframes fly{
-  from{transform: translateX(-100px)}
-  to{transform: translateX(275px)}
+@keyframes increase{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.75);
+  }
+  100%{
+    transfomr: scale(1);
+  }
+
 }
 
 #fotokod{
@@ -107,8 +109,17 @@ p {
   margin-bottom: 10px;
 
 }
-footer{
-  top:950px;
-  position:relative;
-  color:white;
+
+
+#skynav{
+
+  padding:0px;
+  margin:-8px;
+  background-color: white;
+  position: sticky;
+  border-bottom: 1px solid;
+  border-color: darkgray;
+
 }
+
+
