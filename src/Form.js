@@ -114,8 +114,9 @@ export const TicketForm = props => {
                 </div>
 
 
-                <div id="in"> Wybierz bilet:<br/>
-                    {selector}
+                <div id="in">
+                    Wybierz bilet:<br/>
+                        {selector}
                 </div>
 
 

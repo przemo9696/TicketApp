@@ -25,6 +25,7 @@ export const Result = props => {
     const [ticketType, setTicketType] = useContext(TicketTypeContext)
 
     var price = 0;
+    var desc = '-';
 
     const Ticket1 = {value: "1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe"};
     const Ticket2 = {value: "1 godzinny metropolitalny na linie zwykłe"};
@@ -57,102 +58,129 @@ export const Result = props => {
 
     switch(value) {
 
+        /*NORMALNE*/
+
         case Ticket1.value:
             price = 4.80;
             expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket1.value + ' ważny do ' + expDate;
             break;
         case Ticket2.value:
             price = 3.80;
             expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket2.value + ' ważny do ' + expDate;
             break;
         case Ticket3.value:
             price = 4.20;
             expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket3.value + ' ważny do ' + expDate;
             break;
         case Ticket4.value:
             price = 20;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket4.value + ' ważny do ' + expDate;
             break;
         case Ticket5.value:
             price = 23;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket5.value + ' ważny do ' + expDate;
             break;
         case Ticket6.value:
             price = 20;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
-            break;
+            desc = Ticket6.value + ' ważny do ' + expDate;
         case Ticket7.value:
             price = 20;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket7.value + ' ważny do ' + expDate;
             break;
         case Ticket8.value:
             price = 20;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket8.value + ' ważny do ' + expDate;
             break;
         case Ticket9.value:
             price = 15;
             expDate = moment(date + ' ' + time).add(72,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket9.value + ' ważny do ' + expDate;
             break;
         case Ticket10.value:
             price = 46;
             expDate = moment(date + ' ' + time).add(72,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = Ticket10.value + ' ważny do ' + expDate;
             break;
         case Ticket11.value:
             price = 3;
             expDate = "do końca kursu";
+            desc = 'Jednoprzejazdowy ważny na linie zwykłe ' + expDate;
             break;
         case Ticket12.value:
             price = 4;
             expDate = "do końca kursu";
+            desc = 'Jednoprzejazdowy ważny na linie pospieszne/nocne ' + expDate;
             break;
+
+        /*ULGOWE*/
 
         case rTicket1.value:
             price = 2.40;
             expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket1.value + ' ważny do ' + expDate;
             break;
         case rTicket2.value:
             price = 2.40;
             expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket2.value + ' ważny do ' + expDate;
             break;
         case rTicket3.value:
             price = 2.10;
             expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket3.value + ' ważny do ' + expDate;
             break;
         case rTicket4.value:
             price = 10;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket4.value + ' ważny do ' + expDate;
             break;
         case rTicket5.value:
             price = 11.50;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket5.value + ' ważny do ' + expDate;
             break;
         case rTicket6.value:
             price = 10;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket6.value + ' ważny do ' + expDate;
             break;
         case rTicket7.value:
             price = 10;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket7.value + ' ważny do ' + expDate;
             break;
         case rTicket8.value:
             price = 10;
             expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket8.value + ' ważny do ' + expDate;
             break;
         case rTicket9.value:
             price = 7.5;
             expDate = moment(date + ' ' + time).add(72,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket9.value + ' ważny do ' + expDate;
             break;
         case rTicket10.value:
             price = 23;
             expDate = moment(date + ' ' + time).add(72,"hours").format('DD-MM-YYYY HH:mm:ss');
+            desc = rTicket10.value + ' ważny do ' + expDate;
             break;
         case rTicket11.value:
             price = 1.50;
             expDate = "do końca kursu";
+            desc = 'Jednoprzejazdowy ważny na linie zwykłe ' + expDate;
             break;
         case rTicket12.value:
             price = 2;
             expDate = "do końca kursu";
+            desc = 'Jednoprzejazdowy ważny na linie pospieszne/nocne ' + expDate;
             break;
     }
 
@@ -170,8 +198,10 @@ export const Result = props => {
                 <img id="logoMZK" src={logomzk} alt="Logo MZK" height="100" width="100"/>
             </div>
 
+            <div id="ans">{value}</div>
+
             <p> Opis biletu:</p>
-            <div id="ans">{value}</div><br/>
+            <div id="ans">{desc}</div><br/>
 
             <p>Ważny od: </p>
             <div id="ans">{inDate}</div>
