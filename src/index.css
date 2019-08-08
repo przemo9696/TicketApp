@@ -16,114 +16,137 @@ code {
 p {
 
   font-family: "Arial";
-  font-size: 14px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 500;
   color: gray;
   text-align: left;
   margin: 1px;
   margin-left: 5px;
-  margin-bottom: 3px;
-  margin-top: 7px;
+  margin-bottom: 6px;
+  margin-top: 14px;
 
 }
 
 #inBox{
-  background-color: gainsboro;
-  width: 400px;
-  padding: 20px;
-  padding-right:110px;
-  margin-left: auto;
-  margin-right:auto;
 
+  background-color: gainsboro;
+  width: 350px;
+  padding-bottom: 20px;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 #outBox{
+
   position: absolute;
   background-color: gainsboro;
-  width: 250px;
+  width:350px;
   padding: 5px;
   left:0;
   right:0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 35px;
   overflow: hidden;
 
 }
 
 #ans {
   font-family: "Arial";
-  font-size: 12px;
-  font-weight:600;
+  font-size: 14px;
+  font-weight: 600;
   text-align: left;
   margin-left: 5px;
   width: 240px;
 
 }
 #QueR{
-
-  margin-bottom: 125px;
+  margin-bottom: 250px;
   position: relative;
   text-align: center;
 }
 
+#kodQR{
+  height: 330px;
+  width: 330px;
+}
+
 #in{
-  margin-left: px;
+  margin-left: 0px;
   text-align: left;
 }
 
 #logomzk{
+
+
   text-align: center;
   position: relative;
+  animation-timing-function: linear;
   animation-name: increase;
-  animation-duration:4s;
-  animation-iteration-count:infinite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 100px;
   bottom: 50px;
 
 }
 
 @keyframes increase{
   0%{
-    transform: scale(1);
+    transform: scale(2);
   }
   50%{
-    transform: scale(1.75);
+    transform: scale(3.75);
   }
   100%{
-    transfomr: scale(1);
+    transform: scale(2);
   }
 
 }
 
 #fotokod{
   font-family: "Arial";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: gray;
   text-align: left;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
 }
 
 
 #skynav{
-
-  padding:0px;
-  margin:-8px;
+  height: 50px;
+  z-index: 2;
+  width: 100%;
+  padding: 0px;
+  margin: -8px;
+  margin-top: -10px;
   background-color: white;
-  position: sticky;
+  position: fixed;
   border-bottom: 1px solid;
   border-color: darkgray;
+  align-items: center;
+  align-content: center;
 
+
+}
+
+#skycash{
+  margin-top: 4px;
 }
 
 
 input{
+
+  text-align: left;
   width: auto;
   background-color: #efefef;
   color: black;
@@ -135,11 +158,58 @@ input{
   margin-bottom:10px;
   margin-top: 2px;
 
+
+}
+input[type=date],
+input[type=time]{
+  text-align: center;
+  width: 160px;
+  background-color: #efefef;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  margin-right: 3px;
+
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+
+label{
+  margin-right: 45px;
+}
+
+select{
+  width:347px;
+  background-color: #efefef;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  margin-right: 2px;
+  margin-bottom:10px;
+  margin-top: 2px;
+}
+
+input[type=radio]{
+  width: auto;
+  background-color: #efefef;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  marign-right: 2px;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  margin-left: 50px;
 }
 
 input[type=number],
 input[type=text]{
-  width: 100px;
+  width: 335px;
   background-color: #efefef;
   color: black;
   border: 1px solid darkgray;
@@ -149,7 +219,7 @@ input[type=text]{
 }
 
 #input{
-  width: auto;
+  width: 347px;
   background-color: #efefef;
   color: black;
   border: 1px solid darkgray;
@@ -157,9 +227,11 @@ input[type=text]{
   font-size: 15px;
   padding: 5px;
   margin-bottom: 10px;
+  margin-top: 3px;
 }
 
 #button{
+
    width: auto;
    background-color: #efefef;
    color: black;
@@ -167,14 +239,522 @@ input[type=text]{
    border-radius: 5px;
    font-size: 15px;
    padding: 5px;
+   margin-right: 2px;
  }
 
 #button:hover {
+  cursor: pointer;
   width: auto;
   background-color: #efefef;
   color: black;
-  border: 2px solid darkgray;
+  border: 1px solid black;
   border-radius: 5px;
+  margin-right: 2px;
   font-size: 15px;
   padding: 5px;
 }
+
+#backButton{
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  margin-left: -180px;
+  height: 48px;
+  width: 48px;
+  border: none;
+  background-color: white;
+  padding: 5px;
+}
+
+#backButton:hover{
+  cursor: pointer;
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  margin-left: -180px;
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#backButtonText{
+  font-size: 46px;
+  position: fixed;
+  top: -6px;
+  margin-left: 8px;
+  z-index: 3;
+  color: darkgray;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 410px) and (max-width: 500px) {
+
+  #outBox {
+
+    position: absolute;
+    background-color: gainsboro;
+    width: 400px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    overflow: hidden;
+  }
+
+  #inBox {
+    background-color: gainsboro;
+    width: 400px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #kodQR {
+    height: 390px;
+    width: 390px;
+  }
+
+  #backButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -207px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #backButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -207px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #backButtonText{
+    font-size: 46px;
+    position: fixed;
+    top: -6px;
+    margin-left: 8px;
+    z-index: 3;
+    color: darkgray;
+  }
+
+  input{
+
+    text-align: left;
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+
+
+  }
+  input[type=date],
+  input[type=time]{
+    text-align: center;
+    width: 186px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+  }
+
+  label{
+    margin-right: 45px;
+  }
+
+  select{
+    width:398px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+  }
+
+  input[type=radio]{
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    marign-right: 2px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    margin-left: 65px;
+  }
+
+  input[type=number],
+  input[type=text]{
+    width: 386px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  #input{
+    width: 388px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+  }
+
+}
+
+@media screen and (min-width: 380px) and (max-width: 410px) {
+
+  #outBox {
+
+    position: absolute;
+    background-color: gainsboro;
+    width: 365px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    overflow: hidden;
+  }
+
+  #inBox {
+    background-color: gainsboro;
+    width: 365px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #kodQR {
+    height: 350px;
+    width: 350px;
+  }
+
+  #backButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -188px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #backButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -188px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #backButtonText{
+    font-size: 46px;
+    position: fixed;
+    top: -6px;
+    margin-left: 8px;
+    z-index: 3;
+    color: darkgray;
+  }
+
+  input{
+
+    text-align: left;
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+
+
+  }
+  input[type=date],
+  input[type=time]{
+    text-align: center;
+    width: 168px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+  }
+
+  label{
+    margin-right: 45px;
+  }
+
+  select{
+    width:362px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+  }
+
+  input[type=radio]{
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    marign-right: 2px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    margin-left: 55px;
+  }
+
+  input[type=number],
+  input[type=text]{
+    width: 350px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  #input{
+    width: 388px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+  }
+
+}
+
+@media screen and (min-width: 315px) and (max-width: 350px) {
+
+  #outBox {
+
+    position: absolute;
+    background-color: gainsboro;
+    width: 310px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    overflow: hidden;
+  }
+
+  #inBox {
+    background-color: gainsboro;
+    width: 310px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #kodQR {
+    height: 300px;
+    width: 300px;
+  }
+
+  #backButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -160px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #backButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -160px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #backButtonText{
+    font-size: 46px;
+    position: fixed;
+    top: -6px;
+    margin-left: 8px;
+    z-index: 3;
+    color: darkgray;
+  }
+
+  input{
+
+    text-align: left;
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+
+
+  }
+  input[type=date],
+  input[type=time]{
+    text-align: center;
+    width: 138px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+  }
+
+  label{
+    margin-right: 45px;
+  }
+
+  select{
+    width: 303px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+  }
+
+  input[type=radio]{
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    marign-right: 2px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    margin-left: 34px;
+  }
+
+  input[type=number],
+  input[type=text]{
+    width: 290px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  #input{
+    width: 388px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+  }
+
+}
+
+

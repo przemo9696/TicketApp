@@ -1,12 +1,20 @@
 import React, {useState,useContext} from 'react';
 import QR from "./QR.jpg";
 import logomzk from "./logomzk.png";
-import {DateContext, TicketNumContext, TimeContext, ValueContext, VehNrContext, VehTypeContext} from "./context";
+import {
+    DateContext,
+    TicketNumContext,
+    TicketTypeContext,
+    TimeContext,
+    ValueContext,
+    VehNrContext,
+    VehTypeContext
+} from "./context";
 import moment from "moment";
 import {Link} from "react-router-dom";
 
 
-export const Result = (props) => {
+export const Result = props => {
 
     const [value, setValue] = useContext(ValueContext);
     const [vehType, setVehType] = useContext(VehTypeContext);
@@ -14,8 +22,9 @@ export const Result = (props) => {
     const [ticketNum, setTicketNum] = useContext(TicketNumContext);
     const [date, setDate] = useContext(DateContext);
     const [time, setTime] = useContext(TimeContext);
+    const [ticketType, setTicketType] = useContext(TicketTypeContext)
 
-    let price = 0;
+    var price = 0;
 
     const Ticket1 = {value: "1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe"};
     const Ticket2 = {value: "1 godzinny metropolitalny na linie zwykłe"};
@@ -30,8 +39,21 @@ export const Result = (props) => {
     const Ticket11 = {value: "Jednoprzejazdowy na linie zwykłe"};
     const Ticket12 = {value: "Jednoprzejazdowy na linie pospieszne/nocne"};
 
-    const inDate = moment(date + ' ' + time).format('DD-MM-YYYY HH:mm:ss');
-    let expDate = moment(date + ' ' + time).format('DD-MM-YYYY HH:mm:ss');
+    const rTicket1 = {value: "1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe "};
+    const rTicket2 = {value: "1 godzinny metropolitalny na linie zwykłe "};
+    const rTicket3 = {value: "1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle "};
+    const rTicket4 = {value: "Bilet 24 godzinny MZKWej+KOLEJ "};
+    const rTicket5 = {value: "Bilet 24 godzinny MZKZG "};
+    const rTicket6 = {value: "Bilet 24 godzinny ZKMGdy+KOLEJ "};
+    const rTicket7 = {value: "Bilet 24 godzinny ZTMGda+KOLEJ "};
+    const rTicket8 = {value: "Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej "};
+    const rTicket9 = {value: "Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej "};
+    const rTicket10 = {value: "Bilet 72 godzinny MZKZG "};
+    const rTicket11 = {value: "Jednoprzejazdowy na linie zwykłe "};
+    const rTicket12 = {value: "Jednoprzejazdowy na linie pospieszne/nocne "};
+
+    const inDate = moment(date + ' ' + time).subtract(14,"seconds").format('DD-MM-YYYY HH:mm:ss');
+    var expDate = moment(date + ' ' + time).subtract(14, "seconds").format('DD-MM-YYYY HH:mm:ss');
 
     switch(value) {
 
@@ -83,6 +105,55 @@ export const Result = (props) => {
             price = 4;
             expDate = "do końca kursu";
             break;
+
+        case rTicket1.value:
+            price = 2.40;
+            expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket2.value:
+            price = 2.40;
+            expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket3.value:
+            price = 2.10;
+            expDate = moment(date + ' ' + time).add(1,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket4.value:
+            price = 10;
+            expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket5.value:
+            price = 11.50;
+            expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket6.value:
+            price = 10;
+            expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket7.value:
+            price = 10;
+            expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket8.value:
+            price = 10;
+            expDate = moment(date + ' ' + time).add(24,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket9.value:
+            price = 7.5;
+            expDate = moment(date + ' ' + time).add(72,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket10.value:
+            price = 23;
+            expDate = moment(date + ' ' + time).add(72,"hours").format('DD-MM-YYYY HH:mm:ss');
+            break;
+        case rTicket11.value:
+            price = 1.50;
+            expDate = "do końca kursu";
+            break;
+        case rTicket12.value:
+            price = 2;
+            expDate = "do końca kursu";
+            break;
     }
 
     return(
@@ -92,13 +163,12 @@ export const Result = (props) => {
             <div id="fotokod">Fotokod:</div>
 
             <div id="QueR">
-                <img id="kodQR" src={QR} alt="QR" height="220" width="235"/>
+                <img id="kodQR" src={QR} alt="QR"/>
             </div>
 
             <div id="logomzk">
                 <img id="logoMZK" src={logomzk} alt="Logo MZK" height="100" width="100"/>
             </div>
-
 
             <p> Opis biletu:</p>
             <div id="ans">{value}</div><br/>
@@ -137,7 +207,7 @@ export const Result = (props) => {
             <div id="ans">1000110000235883327</div><br/>
 
             <Link to="/">
-                <button id="button">Powrót</button>
+                <button id="backButton"><div id="backButtonText">&lsaquo;</div></button>
             </Link>
 
         </div>

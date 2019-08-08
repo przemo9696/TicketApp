@@ -90,3 +90,17 @@ export const TimeProvider = props => {
     );
 };
 
+export const TicketTypeContext = createContext();
+export const TicketTypeProvider = props => {
+
+    const [ticketType, setTicketType] = useState('normalny');
+
+
+    return(
+
+        <TicketTypeContext.Provider value={[ticketType, setTicketType]}>
+            {props.children}
+        </TicketTypeContext.Provider>
+
+    );
+};
