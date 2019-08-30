@@ -18,7 +18,7 @@ p {
   font-family: "Arial";
   font-size: 17px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 100;
   color: gray;
   text-align: left;
   margin: 1px;
@@ -202,7 +202,7 @@ input[type=radio]{
   font-size: 15px;
   padding: 5px;
   marign-right: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   margin-top: 2px;
   margin-left: 50px;
 }
@@ -231,8 +231,8 @@ input[type=text]{
 }
 
 #button{
-
-   width: auto;
+   text-align: center;
+   width: 50%;
    background-color: #efefef;
    color: black;
    border: 1px solid darkgray;
@@ -244,7 +244,7 @@ input[type=text]{
 
 #button:hover {
   cursor: pointer;
-  width: auto;
+  width: 50%;
   background-color: #efefef;
   color: black;
   border: 1px solid black;
@@ -252,6 +252,32 @@ input[type=text]{
   margin-right: 2px;
   font-size: 15px;
   padding: 5px;
+}
+
+#buyButton{
+  text-align: center;
+  width: auto;
+  background-color: white;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 7px;
+  margin-right: 2px;
+  margin-top: 30px;
+}
+
+#buyButton:hover {
+  cursor: pointer;
+  width: auto;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 2px;
+  font-size: 16px;
+  padding: 7px;
+  margin-top: 30px;
 }
 
 #backButton{
@@ -270,13 +296,12 @@ input[type=text]{
   cursor: pointer;
   z-index: 3;
   position: fixed;
-  top: 0px;
+  top: 0;
   margin-left: -180px;
   height: 48px;
   width: 48px;
   background-color: white;
   color: black;
-  border: 1px solid darkgray;
   border-radius: 5px;
   padding: 5px;
 }
@@ -286,6 +311,42 @@ input[type=text]{
   position: fixed;
   top: -6px;
   margin-left: 8px;
+  z-index: 3;
+  color: darkgray;
+}
+
+#refreshButton{
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  margin-left: 100px;
+  height: 48px;
+  width: 48px;
+  border: none;
+  background-color: white;
+  padding: 5px;
+}
+
+#refreshButton:hover{
+  cursor: pointer;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  margin-left: 100px;
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#refreshButtonText{
+  transform: rotate(180deg);
+  font-size: 40px;
+  position: fixed;
+  margin-left: 3px;
+  top: 4px;
   z-index: 3;
   color: darkgray;
 }
@@ -346,7 +407,6 @@ input[type=text]{
     width: 48px;
     background-color: white;
     color: black;
-    border: 1px solid darkgray;
     border-radius: 5px;
     padding: 5px;
   }
@@ -445,6 +505,32 @@ input[type=text]{
     margin-top: 3px;
   }
 
+  #refreshButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: 115px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #refreshButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    margin-left: 115px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
 }
 
 @media screen and (min-width: 380px) and (max-width: 410px) {
@@ -501,7 +587,6 @@ input[type=text]{
     width: 48px;
     background-color: white;
     color: black;
-    border: 1px solid darkgray;
     border-radius: 5px;
     padding: 5px;
   }
@@ -600,6 +685,32 @@ input[type=text]{
     margin-top: 3px;
   }
 
+  #refreshButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: 105px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #refreshButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    margin-left: 105px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
 }
 
 @media screen and (min-width: 315px) and (max-width: 350px) {
@@ -656,7 +767,6 @@ input[type=text]{
     width: 48px;
     background-color: white;
     color: black;
-    border: 1px solid darkgray;
     border-radius: 5px;
     padding: 5px;
   }
@@ -753,6 +863,32 @@ input[type=text]{
     padding: 5px;
     margin-bottom: 10px;
     margin-top: 3px;
+  }
+
+  #refreshButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: 70px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #refreshButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    margin-left: 70px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
   }
 
 }

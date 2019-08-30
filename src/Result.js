@@ -1,57 +1,24 @@
 import React, {useState,useContext} from 'react';
-import QR from "./QR.jpg";
-import logomzk from "./logomzk.png";
-import {
-    DateContext,
-    TicketNumContext,
-    TicketTypeContext,
-    TimeContext,
-    ValueContext,
-    VehNrContext,
-    VehTypeContext
-} from "./context";
+import QR from "./assets/QR.jpg";
+import logomzk from "./assets/logomzk.png";
 import moment from "moment";
 import {Link} from "react-router-dom";
+import {Ticket1, Ticket2, Ticket3, Ticket4, Ticket5, Ticket6, Ticket7, Ticket8, Ticket9, Ticket10, Ticket11, Ticket12, rTicket1, rTicket2, rTicket3, rTicket4, rTicket5, rTicket6, rTicket7, rTicket8, rTicket9, rTicket10, rTicket11, rTicket12} from './Constants.js';
 
 
 export const Result = props => {
 
-    const [value, setValue] = useContext(ValueContext);
-    const [vehType, setVehType] = useContext(VehTypeContext);
-    const [vehNr, setVehNr] = useContext(VehNrContext);
-    const [ticketNum, setTicketNum] = useContext(TicketNumContext);
-    const [date, setDate] = useContext(DateContext);
-    const [time, setTime] = useContext(TimeContext);
-    const [ticketType, setTicketType] = useContext(TicketTypeContext)
+    const {value} = props.location.state;
+    const {vehType} = props.location.state;
+    const {vehNr} = props.location.state;
+    const {ticketNum} = props.location.state;
+    const {date} = props.location.state;
+    const {time} = props.location.state;
+    const {ticketType} = props.location.state;
 
     var price = 0;
     var desc = '-';
 
-    const Ticket1 = {value: "1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe"};
-    const Ticket2 = {value: "1 godzinny metropolitalny na linie zwykłe"};
-    const Ticket3 = {value: "1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle"};
-    const Ticket4 = {value: "Bilet 24 godzinny MZKWej+KOLEJ"};
-    const Ticket5 = {value: "Bilet 24 godzinny MZKZG"};
-    const Ticket6 = {value: "Bilet 24 godzinny ZKMGdy+KOLEJ"};
-    const Ticket7 = {value: "Bilet 24 godzinny ZTMGda+KOLEJ"};
-    const Ticket8 = {value: "Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej"};
-    const Ticket9 = {value: "Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej"};
-    const Ticket10 = {value: "Bilet 72 godzinny MZKZG"};
-    const Ticket11 = {value: "Jednoprzejazdowy na linie zwykłe"};
-    const Ticket12 = {value: "Jednoprzejazdowy na linie pospieszne/nocne"};
-
-    const rTicket1 = {value: "1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe "};
-    const rTicket2 = {value: "1 godzinny metropolitalny na linie zwykłe "};
-    const rTicket3 = {value: "1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle "};
-    const rTicket4 = {value: "Bilet 24 godzinny MZKWej+KOLEJ "};
-    const rTicket5 = {value: "Bilet 24 godzinny MZKZG "};
-    const rTicket6 = {value: "Bilet 24 godzinny ZKMGdy+KOLEJ "};
-    const rTicket7 = {value: "Bilet 24 godzinny ZTMGda+KOLEJ "};
-    const rTicket8 = {value: "Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej "};
-    const rTicket9 = {value: "Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej "};
-    const rTicket10 = {value: "Bilet 72 godzinny MZKZG "};
-    const rTicket11 = {value: "Jednoprzejazdowy na linie zwykłe "};
-    const rTicket12 = {value: "Jednoprzejazdowy na linie pospieszne/nocne "};
 
     const inDate = moment(date + ' ' + time).subtract(14,"seconds").format('DD-MM-YYYY HH:mm:ss');
     var expDate = moment(date + ' ' + time).subtract(14, "seconds").format('DD-MM-YYYY HH:mm:ss');
@@ -236,7 +203,7 @@ export const Result = props => {
             <p> Numer transakcji: </p>
             <div id="ans">1000110000235883327</div><br/>
 
-            <Link to="/">
+            <Link to = {{pathname: "/", state: {value, vehNr, vehType, ticketNum, date, time}}}>
                 <button id="backButton"><div id="backButtonText">&lsaquo;</div></button>
             </Link>
 
