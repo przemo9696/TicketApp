@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Ticket1 = {value: "1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe"};
 export const Ticket2 = {value: "1 godzinny metropolitalny na linie zwykłe"};
 export const Ticket3 = {value: "1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle"};

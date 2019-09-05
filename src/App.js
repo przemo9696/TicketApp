@@ -2,13 +2,21 @@ import React, {useState} from 'react';
 import './App.css';
 import {TicketForm} from "./Form";
 import {Result} from "./Result";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import skycash from "./assets/skycash.jpg"
 
 function App() {
+  const [ticket, setTicket] = useState({});
+
+  const setTicketHandler = (ticket) => {
+    console.log(ticket);
+    setTicket(ticket);
+  };
 
   return (
+
     <Router>
+
 
         <div className="App">
 
@@ -17,8 +25,8 @@ function App() {
             </div>
 
             <Switch>
-                <Route exact path="/" component={TicketForm} />
-                <Route path="/result" component={Result}/>
+                <Route exact path="/" render={() => <TicketForm setTicketHandler={setTicketHandler} ticket={ticket}/>} />
+                <Route path="/result" render={() => <Result ticket={ticket}/>} />
             </Switch>
 
         </div>
@@ -26,6 +34,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;

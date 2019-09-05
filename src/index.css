@@ -15,16 +15,26 @@ code {
 }
 p {
 
-  font-family: "Arial";
+  font-family: 'Roboto', sans-serif;
   font-size: 17px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   color: gray;
   text-align: left;
   margin: 1px;
   margin-left: 5px;
   margin-bottom: 6px;
   margin-top: 14px;
+
+}
+
+#ans {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 5px;
+  width: 270px;
 
 }
 
@@ -55,15 +65,6 @@ p {
 
 }
 
-#ans {
-  font-family: "Arial";
-  font-size: 14px;
-  font-weight: 600;
-  text-align: left;
-  margin-left: 5px;
-  width: 300px;
-
-}
 #QueR{
   margin-bottom: 250px;
   position: relative;
@@ -110,14 +111,14 @@ p {
 }
 
 #fotokod{
-  font-family: "Arial";
+  font-family: "Roboto",sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: gray;
   text-align: left;
   margin-left: 10px;
   margin-top: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
 }
 
@@ -319,7 +320,7 @@ input[type=text]{
   z-index: 3;
   position: fixed;
   top: 0px;
-  margin-left: 100px;
+  margin-left: 90px;
   height: 48px;
   width: 48px;
   border: none;
@@ -332,7 +333,7 @@ input[type=text]{
   z-index: 3;
   position: fixed;
   top: 0;
-  margin-left: 100px;
+  margin-left: 90px;
   height: 48px;
   width: 48px;
   background-color: white;
@@ -352,6 +353,249 @@ input[type=text]{
 }
 
 /*MEDIA QUERIES*/
+
+@media screen and (min-width: 350px) and (max-width: 380px) {
+
+  #inBox{
+
+    background-color: gainsboro;
+    width: 350px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #outBox{
+
+    position: absolute;
+    background-color: gainsboro;
+    width:350px;
+    padding: 5px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 35px;
+    overflow: hidden;
+
+  }
+
+  #kodQR{
+    height: 330px;
+    width: 330px;
+  }
+
+  input{
+
+    text-align: left;
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+
+
+  }
+  input[type=date],
+  input[type=time]{
+    text-align: center;
+    width: 160px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 3px;
+
+    margin-bottom: 10px;
+    margin-top: 2px;
+  }
+
+  label{
+    margin-right: 45px;
+  }
+
+  select{
+    width:347px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+    margin-bottom:10px;
+    margin-top: 2px;
+  }
+
+  input[type=radio]{
+    width: auto;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    marign-right: 2px;
+    margin-bottom: 11px;
+    margin-top: 2px;
+    margin-left: 50px;
+  }
+
+  input[type=number],
+  input[type=text]{
+    width: 335px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  #input{
+    width: 347px;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+  }
+
+  #button{
+    text-align: center;
+    width: 50%;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 2px;
+  }
+
+  #button:hover {
+    cursor: pointer;
+    width: 50%;
+    background-color: #efefef;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 2px;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  #buyButton{
+    text-align: center;
+    width: auto;
+    background-color: white;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px;
+    margin-right: 2px;
+    margin-top: 30px;
+  }
+
+  #buyButton:hover {
+    cursor: pointer;
+    width: auto;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 2px;
+    font-size: 16px;
+    padding: 7px;
+    margin-top: 30px;
+  }
+
+  #backButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: -180px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #backButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    margin-left: -180px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #backButtonText{
+    font-size: 46px;
+    position: fixed;
+    top: -6px;
+    margin-left: 8px;
+    z-index: 3;
+    color: darkgray;
+  }
+
+  #refreshButton{
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    margin-left: 90px;
+    height: 48px;
+    width: 48px;
+    border: none;
+    background-color: white;
+    padding: 5px;
+  }
+
+  #refreshButton:hover{
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    margin-left: 90px;
+    height: 48px;
+    width: 48px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #refreshButtonText{
+    transform: rotate(180deg);
+    font-size: 40px;
+    position: fixed;
+    margin-left: 3px;
+    top: -5px;
+    z-index: 3;
+    color: darkgray;
+  }
+
+}
 
 @media screen and (min-width: 410px) and (max-width: 500px) {
 
