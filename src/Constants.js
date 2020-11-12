@@ -36,38 +36,38 @@ export const Ticket12 = {
 };
 
 export const rTicket1 = {
-  value: "1 godzinny metropolitalny na linie zwykłe i nocne MZKZG",
+  value: "1 godzinny metropolitalny na linie zwykłe i nocne MZKZG ",
 };
 export const rTicket2 = {
-  value: "1 godzinny metropolitalny na linie nocne/pospieszne/zwykłe",
+  value: "1 godzinny metropolitalny na linie nocne/pospieszne/zwykłe ",
 };
 export const rTicket3 = {
-  value: "1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle",
+  value: "1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle ",
 };
 export const rTicket4 = {
-  value: "Bilet 24 godzinny ZTMGda+KOLEJ",
+  value: "Bilet 24 godzinny ZTMGda+KOLEJ ",
 };
 export const rTicket5 = {
-  value: "Bilet 24 godzinny ZKMGDy+KOLEJ",
+  value: "Bilet 24 godzinny ZKMGDy+KOLEJ ",
 };
 export const rTicket6 = {
-  value: "Bilet 24 godzinny MZKWej+KOLEJ",
+  value: "Bilet 24 godzinny MZKWej+KOLEJ ",
 };
 export const rTicket7 = {
-  value: "Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej",
+  value: "Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej ",
 };
 export const rTicket8 = {
-  value: "Bilet 24 godzinny MZKZG",
+  value: "Bilet 24 godzinny MZKZG ",
 };
 export const rTicket9 = {
-  value: "Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej",
+  value: "Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej ",
 };
 export const rTicket10 = {
-  value: "Bilet 72 godzinny MZKZG",
+  value: "Bilet 72 godzinny MZKZG ",
 };
 export const rTicket11 = {
-  value: "Jednoprzejazdowy na linie zwykłe i nocne MZKZG",
+  value: "Jednoprzejazdowy na linie zwykłe i nocne MZKZG ",
 };
 export const rTicket12 = {
-  value: "Jednoprzejazdowy na linie zwykłe/pospieszne/nocne MZKZG",
+  value: "Jednoprzejazdowy na linie zwykłe/pospieszne/nocne MZKZG ",
 };

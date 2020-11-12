@@ -73,31 +73,31 @@ export const TicketForm = (props) => {
           Wybierz bilet (ulgowy)
         </option>
         <option value={rTicket11.value}>
-          Jednoprzejazdowy na linie zwykłe
+          Jednoprzejazdowy na linie zwykłe i nocne MZKZG
         </option>
         <option value={rTicket12.value}>
-          Jednoprzejazdowy na linie pospieszne/nocne
+          Jednoprzejazdowy na linie zwykłe/pospieszne/nocne MZKZG
         </option>
         <option value={rTicket1.value}>
-          1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe
+          1 godzinny metropolitalny na linie zwykłe i nocne MZKZG
         </option>
         <option value={rTicket2.value}>
-          1 godzinny metropolitalny na linie zwykłe
+          1 godzinny metropolitalny na linie nocne/pospieszne/zwykłe
         </option>
         <option value={rTicket3.value}>
           1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle
         </option>
-        <option value={rTicket4.value}>Bilet 24 godzinny MZKWej+KOLEJ</option>
-        <option value={rTicket5.value}>Bilet 24 godzinny MZKZG</option>
-        <option value={rTicket6.value}>Bilet 24 godzinny ZKMGdy+KOLEJ</option>
-        <option value={rTicket7.value}>Bilet 24 godzinny ZTMGda+KOLEJ</option>
-        <option value={rTicket8.value}>
+        <option value={rTicket4.value}>Bilet 24 godzinny ZTMGda+KOLEJ</option>
+        <option value={rTicket5.value}>Bilet 24 godzinny ZKMGDy+KOLE</option>
+        <option value={rTicket6.value}>Bilet 24 godzinny MZKWej+KOLEJ</option>
+        <option value={rTicket7.value}>
           Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej
         </option>
-        <option value={rTicket9.value}>Bilet 72 godzinny MZKZG</option>
-        <option value={rTicket10.value}>
+        <option value={rTicket8.value}>Bilet 24 godzinny MZKZG</option>
+        <option value={rTicket9.value}>
           Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej
         </option>
+        <option value={rTicket10.value}>Bilet 72 godzinny MZKZG</option>
       </select>
     );
   } else {
@@ -111,30 +111,32 @@ export const TicketForm = (props) => {
         <option value="-" hidden>
           Wybierz bilet (normalny)
         </option>
-        <option value={Ticket11.value}>Jednoprzejazdowy na linie zwykłe</option>
+        <option value={Ticket11.value}>
+          Jednoprzejazdowy na linie zwykłe i nocne MZKZG
+        </option>
         <option value={Ticket12.value}>
-          Jednoprzejazdowy na linie pospieszne/nocne
+          Jednoprzejazdowy na linie zwykłe/pospieszne/nocne MZKZG
         </option>
         <option value={Ticket1.value}>
-          1 godzinny metropolitalny na linie nocne/pośpieszne/zwykłe
+          1 godzinny metropolitalny na linie zwykłe i nocne MZKZG
         </option>
         <option value={Ticket2.value}>
-          1 godzinny metropolitalny na linie zwykłe
+          1 godzinny metropolitalny na linie nocne/pospieszne/zwykłe
         </option>
         <option value={Ticket3.value}>
           1 godzinny metropolitalny ZKM Gdynia nocne/pospieszne/zwykle
         </option>
-        <option value={Ticket4.value}>Bilet 24 godzinny MZKWej+KOLEJ</option>
-        <option value={Ticket5.value}>Bilet 24 godzinny MZKZG</option>
-        <option value={Ticket6.value}>Bilet 24 godzinny ZKMGdy+KOLEJ</option>
-        <option value={Ticket7.value}>Bilet 24 godzinny ZTMGda+KOLEJ</option>
-        <option value={Ticket8.value}>
+        <option value={Ticket4.value}>Bilet 24 godzinny ZTMGda+KOLEJ</option>
+        <option value={Ticket5.value}>Bilet 24 godzinny ZKMGDy+KOLE</option>
+        <option value={Ticket6.value}>Bilet 24 godzinny MZKWej+KOLEJ</option>
+        <option value={Ticket7.value}>
           Bilet 24 godzinny ZTMGda+ZKMGdy+MZKWej
         </option>
-        <option value={Ticket9.value}>Bilet 72 godzinny MZKZG</option>
-        <option value={Ticket10.value}>
+        <option value={Ticket8.value}>Bilet 24 godzinny MZKZG</option>
+        <option value={Ticket9.value}>
           Bilet 72 godzinny ZTMGda+ZKMGdy+MZKWej
         </option>
+        <option value={Ticket10.value}>Bilet 72 godzinny MZKZG</option>
       </select>
     );
   }

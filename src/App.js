@@ -10,6 +10,7 @@ function App() {
 
   const setTicketHandler = (ticket) => {
     setTicket(ticket);
+    console.log(ticket);
   };
 
   return (

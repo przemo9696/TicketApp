@@ -507,7 +507,7 @@ input[type="text"] {
     font-size: 40px;
     position: fixed;
     margin-left: 3px;
-    top: 0px;
+    top: -2px;
     z-index: 3;
     color: darkgray;
   }
