@@ -36,10 +36,8 @@ export const Result = (props) => {
   useEffect(() => {
     setLocalStorageTicket(JSON.parse(localStorage.getItem("ticket")));
   }, []);
-  console.log(localStorageTicket);
 
   const ticket = props.date === undefined ? localStorageTicket : props.ticket;
-  console.log(ticket.date);
 
   var price = 0;
   var desc = "-";
