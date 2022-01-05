@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/TicketApp/precache-manifest.1c6880c2345874dc77b976f3dd49ac8a.js"
+  "/TicketApp/precache-manifest.776be724166e5a620cd878aa47784e78.js"
 );
 
 self.addEventListener('message', (event) => {
