@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TicketApp/static/css/main.7e09a068.chunk.css",
+    "main.js": "/TicketApp/static/js/main.51c625c0.chunk.js",
+    "main.js.map": "/TicketApp/static/js/main.51c625c0.chunk.js.map",
+    "runtime~main.js": "/TicketApp/static/js/runtime~main.b6e98e56.js",
+    "runtime~main.js.map": "/TicketApp/static/js/runtime~main.b6e98e56.js.map",
+    "static/js/2.c30c06c6.chunk.js": "/TicketApp/static/js/2.c30c06c6.chunk.js",
+    "static/js/2.c30c06c6.chunk.js.map": "/TicketApp/static/js/2.c30c06c6.chunk.js.map",
+    "index.html": "/TicketApp/index.html",
+    "precache-manifest.819c5eca798d61f47a09cd6e7321a0b1.js": "/TicketApp/precache-manifest.819c5eca798d61f47a09cd6e7321a0b1.js",
+    "service-worker.js": "/TicketApp/service-worker.js",
+    "static/css/main.7e09a068.chunk.css.map": "/TicketApp/static/css/main.7e09a068.chunk.css.map",
+    "static/media/logomzk.png": "/TicketApp/static/media/logomzk.5efeae11.png",
+    "static/media/skycash.jpg": "/TicketApp/static/media/skycash.feb2d7ab.jpg"
+  }
+}
