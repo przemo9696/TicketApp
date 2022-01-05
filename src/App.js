@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { TicketForm } from "./Form";
 import { Result } from "./Result";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import skycash from "./assets/skycash.jpg";
 
 function App() {
