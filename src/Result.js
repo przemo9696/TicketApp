@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import QR from "./assets/QR.jpg";
 import logomzk from "./assets/logomzk.png";
 import moment from "moment";
@@ -31,7 +31,15 @@ import {
 } from "./Constants.js";
 
 export const Result = (props) => {
-  const ticket = props.ticket;
+  const [localStorageTicket, setLocalStorageTicket] = useState({}); 
+
+  useEffect(() => {
+    setLocalStorageTicket(JSON.parse(localStorage.getItem("ticket")));
+  }, []);
+  console.log(localStorageTicket);
+
+  const ticket = props.date === undefined ? localStorageTicket : props.ticket;
+  console.log(ticket.date);
 
   var price = 0;
   var desc = "-";
