@@ -227,13 +227,13 @@ export const TicketForm = (props) => {
         <button id="button" type="button" onClick={buyNow}>
           Teraz
         </button>
-      </div>
 
-      <Link to={{ pathname: "/result" }}>
-        <button onClick={buyTicket} id="buyButton">
-          Kup Bilet
-        </button>
-      </Link>
+        <Link to={{ pathname: "/result" }}>
+          <button onClick={buyTicket} id="buyButton">
+            Kup Bilet
+          </button>
+        </Link>
+      </div>
 
       <button id="refreshButton" onClick={clearStorage}>
         <div id="refreshButtonText"> &#8635; </div>
