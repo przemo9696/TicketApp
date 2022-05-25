@@ -3,4 +3,4 @@ Used Libraries:
 - React.js
 - Moment.js
 
-link: https://przemo9696.github.io/
+link: https://przemo9696.github.io/TicketApp/#/
